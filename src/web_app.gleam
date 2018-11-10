@@ -1,9 +1,9 @@
-external type Request
+external type Request;
 
 // Reading information from the request
 
-external fn get_path(Request) -> List(String) = 'elli_request' 'path'
-external fn get_raw_method(Request) -> Atom = 'elli_request' 'method'
+external fn get_path(Request) -> List(String) = 'elli_request' 'path';
+external fn get_raw_method(Request) -> Atom = 'elli_request' 'method';
 
 enum Method =
   | Get
@@ -49,7 +49,7 @@ pub fn handle_event(event, data, args) {
 
 // Starting the server
 
-external fn elli_start_link(List(Tuple(Atom, Atom))) -> Atom = 'elli' 'start_link'
+external fn elli_start_link(List(Tuple(Atom, Atom))) -> Atom = 'elli' 'start_link';
 
 pub fn start_link() {
   elli_start_link([{'callback', 'gleam_web_app'}])
