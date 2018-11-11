@@ -1,11 +1,11 @@
-external type Request;
+pub external type Request;
 
 // Reading information from the request
 
 external fn get_path(Request) -> List(String) = 'elli_request' 'path';
 external fn get_raw_method(Request) -> Atom = 'elli_request' 'method';
 
-enum Method =
+pub enum Method =
   | Get
   | Post
   | Patch
